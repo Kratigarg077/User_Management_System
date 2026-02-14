@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "9876543210",
+    "address": "Delhi"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "phone": "9123456780",
+    "address": "Mumbai"
+  },
+  {
+    "id": 3,
+    "name": "Alex Brown",
+    "email": "alex@example.com",
+    "phone": "9001122334",
+    "address": "Bangalore"
+  },
+  {
+    "id": 4,
+    "name": "Alen Grand",
+    "email": "alen@example.com",
+    "phone": "7601122334",
+    "address": "Noida"
+  }
+]
