@@ -1,5 +1,6 @@
 <!-- Header / Vertical Navbar -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <div class="d-flex">
 
@@ -9,23 +10,23 @@
     <ul class="nav nav-pills flex-column mb-auto">
 
       <li class="nav-item">
-        <a href="/"
-           class="nav-link text-white <%= currentPath === '/' ? 'active' : '' %>">
-          Home
+        <a href="/home"
+           class="nav-link text-white <%= currentPath === '/home' ? 'active' : '' %>">
+          <i class="fas fa-home me-2"></i> Home
         </a>
       </li>
 
       <li class="nav-item">
         <a href="/insert"
            class="nav-link text-white <%= currentPath === '/insert' ? 'active' : '' %>">
-          Insert
+          <i class="fas fa-plus-circle me-2"></i> Insert
         </a>
       </li>
 
       <li class="nav-item">
         <a href="/view"
            class="nav-link text-white <%= currentPath === '/view' ? 'active' : '' %>">
-          List
+          <i class="fas fa-list me-2"></i> List
         </a>
       </li>
 
@@ -33,10 +34,24 @@
 
     <hr class="text-white">
 
-    <form class="d-flex">
-      <input class="form-control form-control-sm me-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-light btn-sm">Go</button>
-    </form>
+    <!-- User Info Section -->
+    <% if(user) { %>
+      <div class="mb-3">
+        <small class="d-block text-white-50 mb-1"><i class="fas fa-user-circle me-1"></i>Logged in as:</small>
+        <p class="mb-2 small">
+          <strong><%= user.userName %></strong><br>
+          <span class="text-white-50"><%= user.userEmail %></span>
+        </p>
+      </div>
+
+      <hr class="text-white">
+
+      <!-- Logout Button -->
+      <a href="/logout" class="btn btn-outline-light btn-sm w-100">
+        <i class="fas fa-sign-out-alt me-1"></i> Logout
+      </a>
+    <% } %>
+
   </nav>
 
 <div class="flex-grow-1 d-flex flex-column">

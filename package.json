@@ -11,10 +11,13 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "bootstrap": "^5.3.8",
     "ejs": "^3.1.10",
     "express": "^5.2.1",
+    "express-session": "^1.19.0",
     "mongoose": "^9.2.0",
+    "multer": "^2.0.2",
     "nodemon": "^3.1.11"
   }
 }

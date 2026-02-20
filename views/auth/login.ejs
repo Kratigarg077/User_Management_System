@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="auth-background">
+
+  <div class="login-container">
+    <div class="card auth-card">
+      <div class="card-header">
+        <h3><i class="fas fa-sign-in-alt"></i> Login</h3>
+        <small>Sign in to your account</small>
+      </div>
+
+      <div class="card-body">
+
+        <%
+            errorMsg = typeof errorMsg !== 'undefined' ? errorMsg : null;
+            successMsg = typeof successMsg !== 'undefined' ? successMsg : null;
+            formData = typeof formData !== 'undefined' ? formData : {};
+        %>
+        
+        <!-- Messages -->
+        <% if (errorMsg) { %>
+        <div class="alert alert-danger auth-alert">
+            <i class="fas fa-exclamation-circle me-1"></i> <%= errorMsg %>
+        </div>
+        <% } %>
+
+        <% if (successMsg) { %>
+        <div class="alert alert-success auth-alert">
+            <i class="fas fa-check-circle me-1"></i> <%= successMsg %>
+        </div>
+        <% } %>
+
+        <!-- Login Form -->
+        <form method="post" action="/">
+
+          <!-- Email Field -->
+          <div class="mb-3">
+            <label class="form-label auth-form-label">
+              <i class="fas fa-envelope"></i>Email Address
+            </label>
+            <input 
+              type="email" 
+              class="form-control auth-form-control" 
+              name="userEmail" 
+              placeholder="Enter your email" 
+              value="<%= formData?.userEmail || '' %>"
+              required
+              autocomplete="off"
+            >
+            <small class="text-muted">We'll never share your email.</small>
+          </div>
+
+          <!-- Password Field -->
+          <div class="mb-3">
+            <label class="form-label auth-form-label">
+              <i class="fas fa-lock"></i>Password
+            </label>
+            <input 
+              type="password" 
+              class="form-control auth-form-control" 
+              name="userPassword" 
+              placeholder="Enter your password" 
+              required
+              autocomplete="off"
+            >
+          </div>
+
+          <!-- Remember Me & Forgot Password -->
+          <div class="d-flex justify-content-between mb-3 small">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">
+                Remember me
+              </label>
+            </div>
+            <a href="/forgotPass" class="auth-link">Forgot password?</a>
+          </div>
+
+          <!-- Login Button -->
+          <button type="submit" class="btn btn-auth mb-3">
+            <i class="fas fa-sign-in-alt"></i> Login
+          </button>
+
+        </form>
+
+        <!-- Signup Link -->
+        <div class="signup-link">
+          <small>Don't have an account? 
+            <a href="/signup" class="auth-link">Signup</a>
+          </small>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
