@@ -219,13 +219,9 @@ npm run dev
 
 ## Future Enhancements
 
-- Implement Multer for actual file uploads
 - Email notifications for password reset
 - User roles and permissions
 - Search and filter users
 - Pagination for user list
 - User profile page
 - Change password functionality
-- Two-factor authentication
-- API endpoints for mobile apps
-- Database backup functionality
