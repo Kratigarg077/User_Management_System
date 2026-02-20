@@ -1,6 +1,6 @@
 # User Management System
 
-A full-featured CRUD User Management Dashboard with Authentication, Session Management, and File Upload UI built with Node.js, Express, MongoDB, EJS, Bootstrap 5 and Font Awesome.
+A full-featured CRUD User Management Dashboard with Authentication, Session Management, and File Upload built with Node.js, Express, MongoDB, EJS, Bootstrap 5 and Font Awesome.
 
 Allows users to Register, Login, and Manage user records with profile photos, clean responsive UI, and comprehensive dashboard.
 
