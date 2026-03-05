@@ -14,7 +14,7 @@ Allows users to Register, Login, and Manage user records with profile photos, cl
 - Password confirmation validation
 - Session-based authentication
 - Logout functionality
-- Forgot password route (UI ready for implementation)
+- Forgot password functionality
 - Protected routes with authentication middleware
 
 ### Dashboard & User Management
@@ -214,14 +214,4 @@ npm run dev
 
 **Images not displaying**
 - Ensure `public/uploads/` directory exists for profile photos
-
 ---
-
-## Future Enhancements
-
-- Email notifications for password reset
-- User roles and permissions
-- Search and filter users
-- Pagination for user list
-- User profile page
-- Change password functionality
